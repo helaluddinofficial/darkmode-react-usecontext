@@ -1,0 +1,30 @@
+.header {
+  background-color: #facc15; /* bg-yellow-400 */
+  position: fixed; /* fixed */
+  top: 1rem; /* top-6 (6 * 0.25rem = 1.5rem) */
+  left: 0.5rem; /* left-10 (10 * 0.25rem = 2.5rem) */
+  display: flex; /* flex */
+  align-items: center; /* items-center */
+  justify-content: space-between; /* justify-between */
+  gap: 1rem; /* gap-10 (10 * 0.25rem = 2.5rem) */
+  text-decoration: none;
+  padding: 1rem; /* p-5 (5 * 0.25rem = 1.25rem) */
+  font-weight: 700; /* font-bold */
+  border-radius: 9999px; /* rounded-full */
+  color: #6b7280; /* text-gray-500 */
+}
+@media (max-width: 720px) {
+  .toggleBtn {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    left: 30%;
+    top: 1rem;
+    gap: 2.5rem;
+    padding: 1.25rem;
+  }
+}
+/*  */

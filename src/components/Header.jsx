@@ -1,16 +1,33 @@
-import React from 'react'
-import ToggleButton from './ToggleButton'
-import Container from './Container'
+import ToggleButton from './ToggleButton';
+import styles from './Header.module.css';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
-	return (
-		<div className='bg-emerald-400/45 fixed top-20 md:left-1/3 left-10 items-center p-5 font-bold  rounded-full justify-between gap-10 flex list-none text-gray-500'>
-			<li>Home</li>
-			<li>About</li>
-			<li>Contact </li>
-			<li><ToggleButton/></li>
-		</div>
-	)
-}
+  return (
+    <div className={styles.header}>
+      <Link to="/" className='link'>
+        {' '}
+        Home
+      </Link>
+      <Link to="/resume" className="link">
+        {' '}
+        Resume
+      </Link>
+      <Link to="/projects" className="link">
+        {' '}
+        Project
+      </Link>
+      <Link to="/about" className="link">
+        {' '}
+       About 
+      </Link>
+     
 
-export default Header
+      <span className={styles.toggleBtn }><ToggleButton /> </span>
+        
+     
+    </div>
+  );
+};
+
+export default Header;

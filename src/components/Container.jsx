@@ -1,15 +1,19 @@
-import React from 'react'
-import { useContext } from 'react'
-import { DarkModeContext } from '../hooks/DarkModeProvider'
-import ToggleButton from './ToggleButton'
+import { UseMode } from "../hooks/DarkModeProvider";
+import ToggleButton from "./ToggleButton";
 
-const Container = () => {
-	const {darkMode}=useContext(DarkModeContext)
-	return (
-		<div className={darkMode? `Container Container-dark`:`Container Container-light`} >
-			<ToggleButton/>
-		</div>
-	)
-}
+// Container.jsx
+const Container = ({ children }) => {
+  const { darkMode } = UseMode();
 
+  return (
+    <div
+      className={
+        darkMode ? 'Container Container-dark' : 'Container Container-light'
+      }
+    >
+      <ToggleButton />
+      {children} {/* ✅ Projects page will appear here */}
+    </div>
+  );
+};
 export default Container

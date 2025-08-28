@@ -1,20 +1,19 @@
-import React from 'react'
-import Button from './Button'
-import { useContext } from 'react'
-import { DarkModeContext } from '../hooks/DarkModeProvider'
-import { Moon } from 'lucide-react'
-import { Sun } from 'lucide-react'
+
+import { DarkModeContext, UseMode } from '../hooks/DarkModeProvider';
+import { Moon, Sun } from 'lucide-react'; // ✅ Import icons properly
 
 const ToggleButton = () => {
-	const { darkMode, toggleDarkMode } = useContext(DarkModeContext)
-	const handleClick = () => {
-		toggleDarkMode()
-	}
-	return (
-		<div onClick={handleClick}>
-		 {darkMode? <Moon/>:<Sun/>} 
-		</div>
-	)
-}
+  const {toggleDarkMode,darkMode}=UseMode()
 
-export default ToggleButton
+  const handleClick = () => {
+    toggleDarkMode();
+  };
+
+  return (
+    <button onClick={handleClick}>
+      {darkMode ? <Moon size={20} /> : <Sun size={20} />}
+    </button>
+  );
+};
+
+export default ToggleButton;

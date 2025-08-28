@@ -1,0 +1,55 @@
+.project {
+  background-color: red;
+  display: grid;
+
+  grid-template-columns: 1fr;
+}
+@media (min-width: 780px) {
+  .project {
+    background-color: red;
+    display: grid;
+    width: 100vw;
+    height: auto;
+
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+/* card */
+.projectDiv {
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 5px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 4px;
+  background-color: gray;
+}
+.img {
+  width: 100%;
+  max-height: 90vh;
+  object-fit: cover;
+}
+.title {
+  border-bottom: 1px solid black;
+}
+.link{
+	color: yellow;
+	text-decoration: none;
+	opacity: .7;
+}
+.link:hover{
+	color: yellow;opacity: .3;
+}
+.link2{
+	color: blue;text-decoration: none;
+	opacity: .7;
+}
+.link2:hover{
+	opacity: .3;
+}
+.btnLink{
+	display: flex;
+	justify-content: space-evenly;
+}

@@ -1,0 +1,45 @@
+/* first section Home */
+.home {
+  top: 1.5rem;
+  height: 100vh;
+  margin-top: 4.1rem;
+}
+.homeFirst {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-basis: 100%;
+  height: 80vh;
+}
+.homeFirst1 {
+  flex-basis: 50%;
+}
+.homeFirst2 {
+  flex-basis: 50%;
+	justify-items: center;
+	margin-left: 5px;
+}
+@media (min-width: 720px) {
+  .homeFirst {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+    height: 80vh;
+  }
+  .homeFirst1 {
+    flex-basis: 60%;
+    background-color: blue;
+  }
+  .homeFirst2 {
+    flex-basis: 40%;
+  }
+}
+@media (min-width:720px){ 
+.homeFirst2Img {
+  height: 78vh;
+	margin: 4px;
+	margin-left: 2rem;
+	align-items: center;
+  width: 90%;
+  border-radius: 100%;
+}
+}
